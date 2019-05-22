@@ -11,11 +11,11 @@ function reducer(state = initialState, action) {
   switch(action.type) {
     case 'ADD_DRINK':
       return { ...state, drink: action.payload };
-    case 'ADD-SANDWICH':
+    case 'ADD_SANDWICH':
       return { ...state, sandwich: action.payload };
-    case 'ADD-FRUIT':
+    case 'ADD_FRUIT':
       return { ...state, fruit: action.payload };
-    case 'ADD-DESSERT':
+    case 'ADD_DESSERT':
       return { ...state, dessert: action.payload };
     default: 
       return state;
@@ -23,5 +23,9 @@ function reducer(state = initialState, action) {
 }
 
 const store = createStore(reducer);
+
+store.dispatch({
+  type: 'ADD_DRINK'
+})
 
 //here we dispatch things to be added to the store
