@@ -1,8 +1,9 @@
-import React from 'react';
-import { render } from 'react-dom';
-import App from './components/App';
+import { createStore } from 'redux';
 
-render(
-  <App />,
-  document.getElementById('root')
-);
+function reducer(state, action) {
+  //here goes stuff
+}
+
+const store = createStore(reducer);
+
+//here we dispatch things to be added to the store
