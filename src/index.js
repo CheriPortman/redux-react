@@ -1,4 +1,9 @@
 import { createStore } from 'redux';
+import { addDrink, removeDrink, 
+  addSandwich, removeSandwich, 
+  addFruit, removeFruit,
+  addDessert, removeDessert } 
+  from './actions/lunchActions';
 
 const initialState = {
   drink: null,
@@ -32,47 +37,27 @@ function reducer(state = initialState, action) {
 
 const store = createStore(reducer);
 
-store.dispatch({
-  type: 'ADD_DRINK',
-  payload: 'Bubbly'
-});
+store.dispatch(addDrink('water'));
 console.log('add drink', store.getState());
 
-store.dispatch({
-  type: 'ADD_SANDWICH',
-  payload: 'liverwurst'
-});
+store.dispatch(addSandwich('turkey'));
 console.log('sandwich', store.getState());
 
-store.dispatch({
-  type: 'ADD_FRUIT',
-  payload: 'apple'
-});
+store.dispatch(addFruit('apple'));
 console.log('fruit', store.getState());
 
-store.dispatch({
-  type: 'ADD_DESSERT',
-  payload: 'cookies'
-});
+store.dispatch(addDessert('chocolate'));
 console.log('dessert', store.getState());
 
-store.dispatch({
-  type: 'REMOVE_DRINK'
-});
+store.dispatch(removeDrink());
 console.log('removed drink', store.getState());
 
-store.dispatch({
-  type: 'REMOVE_SANDWICH'
-});
+store.dispatch(removeSandwich());
 console.log('sandwith removed', store.getState());
 
-store.dispatch({
-  type: 'REMOVE_FRUIT'
-});
+store.dispatch(removeFruit());
 console.log('fruit removed', store.getState());
 
-store.dispatch({
-  type: 'REMOVE_DESSERT'
-});
+store.dispatch(removeDessert());
 console.log('fruit removed', store.getState());
 
