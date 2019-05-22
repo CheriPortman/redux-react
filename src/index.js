@@ -1,6 +1,13 @@
 import { createStore } from 'redux';
 
-function reducer(state, action) {
+const initialState = {
+  drink: null,
+  sandwich: null,
+  fruit: null,
+  dessert: null
+};
+
+function reducer(state = initialState, action) {
   //here goes stuff
 }
 
