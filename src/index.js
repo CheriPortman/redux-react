@@ -25,7 +25,10 @@ function reducer(state = initialState, action) {
 const store = createStore(reducer);
 
 store.dispatch({
-  type: 'ADD_DRINK'
-})
+  type: 'ADD_DRINK',
+  payload: 'Bubbly'
+});
 
-//here we dispatch things to be added to the store
+console.log('add drink', store.getState());
+
+
