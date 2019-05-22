@@ -8,7 +8,18 @@ const initialState = {
 };
 
 function reducer(state = initialState, action) {
-  //here goes stuff
+  switch(action.type) {
+    case 'ADD_DRINK':
+      return { ...state, drink: action.payload };
+    case 'ADD-SANDWICH':
+      return { ...state, sandwich: action.payload };
+    case 'ADD-FRUIT':
+      return { ...state, fruit: action.payload };
+    case 'ADD-DESSERT':
+      return { ...state, dessert: action.payload };
+    default: 
+      return state;
+  }
 }
 
 const store = createStore(reducer);
