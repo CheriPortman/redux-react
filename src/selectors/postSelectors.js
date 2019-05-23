@@ -1,7 +1,4 @@
-//get all posts
-//get a post by index
-
-
+//id is index (map's second param is index)
 export const getPosts = state => state.posts.map((post, id) => ({
   ...post,
   id
