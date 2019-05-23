@@ -33,5 +33,9 @@ export default function reducer(state = initialState, action) {
           ...state[action.payload.postId].slice(action.payload.commentIndex + 1),
         ]
       };
+    case DELETE_POST:
+      return deletePostComments(state, action.payload);
+    default: 
+      return state;
   }
 }

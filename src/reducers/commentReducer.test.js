@@ -33,4 +33,16 @@ describe('comment reducer', () => {
       1: ['Is Good']
     });
   });
+
+  it('handles the DELETE_POST action', () => {
+    const initialState = {
+      1: ['hi', 'Is good'],
+      2: ['you']
+    };
+    const newState = reducer(initialState, deletePost(1));
+
+    expect(newState).toEqual({
+      2: ['you']
+    });
+  });
 });
