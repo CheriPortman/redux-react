@@ -8,7 +8,7 @@ export default function reducer(state = initialState, action) {
       return [...state, action.payload];
     case DELETE_POST:
       return [
-        //take everything beofre the deleted post
+        //take everything before the deleted post
         ...state.slice(0, action.payload),
         //take everything after the deleted post
         ...state.slice(action.payload + 1)
