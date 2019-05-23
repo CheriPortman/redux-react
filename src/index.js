@@ -1,8 +1,12 @@
-import { combineReducers } from 'redux';
-import post from './reducers/postReducer';
-import comment from './reducers/commentReducer';
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import store from '../store';
+import App from './components/App';
 
-export default combineReducers({
-  post,
-  comment
-});
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
