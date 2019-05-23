@@ -25,7 +25,13 @@ export default function reducer(state = initialState, action) {
           action.payload.comment
         ]
       };
-    // case DELETE_COMMENT: 
-    //   return [...state];
+    case DELETE_COMMENT: 
+      return {
+        ...state,
+        [action.payload.postId]: [
+          ...state[action.payload.postId].slice(0, action.payload.commentIndex),
+          ...state[action.payload.postId].slice(action.payload.commentIndex + 1),
+        ]
+      };
   }
 }
