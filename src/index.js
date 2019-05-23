@@ -1,8 +1,8 @@
-import React from 'react';
-import { render } from 'react-dom';
-import App from './components/App';
+import { combineReducers } from 'redux';
+import post from './reducers/postReducer';
+import comment from './reducers/commentReducer';
 
-render(
-  <App />,
-  document.getElementById('root')
-);
+export default combineReducers({
+  post,
+  comment
+});
