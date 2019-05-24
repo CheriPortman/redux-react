@@ -19,6 +19,7 @@ export default class CommentForm extends PureComponent {
   }
 
   updateComment = ({ target }) => {
+    console.log('comment target', target);
     this.setState({ comment: target.value });
   }
 
