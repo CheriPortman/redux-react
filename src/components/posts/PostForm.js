@@ -4,7 +4,6 @@ import { FaCheck } from 'react-icons/fa';
 import styles from '../../components/Home.css';
 
 export default class PostForm extends PureComponent {
-  //static proptypes typically hint at connect
   static propTypes = {
     onSubmit: PropTypes.func.isRequired
   }
@@ -30,7 +29,6 @@ export default class PostForm extends PureComponent {
     const { title, body } = this.state;
     const textareaStyle = { width: '50vw', height: '25vh', margin: '10px', marginBottom: '-5px', marginTop: '10px' };
     
-
     return (
       <form className={styles.PostForm} onSubmit={this.handleSubmit}>
         <input name="title" value={title} onChange={this.handleChange} />
@@ -41,5 +39,4 @@ export default class PostForm extends PureComponent {
       </form>
     );
   }
-
 }

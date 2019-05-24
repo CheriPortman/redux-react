@@ -1,4 +1,3 @@
-//create and export a redux store
 import { createStore } from 'redux';
 import reducer from './src/reducers';
 

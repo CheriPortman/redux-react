@@ -1,5 +1,4 @@
 import reducer from './commentReducer';
-
 import { createComment, deleteComment } from '../actions/commentActions';
 import { deletePost } from '../actions/postActions';
 

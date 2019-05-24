@@ -1,9 +1,3 @@
-//store comments for each post 
-//(create an object where the key is a posts index and value
-//is an array of comments )
-//handle: create comment, delete a comment
-//deletePost should delete all comments as well
-
 import { CREATE_COMMENT, DELETE_COMMENT } from '../actions/commentActions';
 import { DELETE_POST } from '../actions/postActions';
 
