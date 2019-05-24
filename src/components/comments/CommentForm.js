@@ -7,7 +7,7 @@ export default class CommentForm extends PureComponent {
   }
 
   state = {
-    comment: ''
+    comment: 'enter comment here!'
   }
 
   handleSubmit = event => {
@@ -19,15 +19,16 @@ export default class CommentForm extends PureComponent {
   }
 
   updateComment = ({ target }) => {
-    console.log('comment target', target);
     this.setState({ comment: target.value });
   }
 
   render() {
     const { comment } = this.state;
+    const textareaStyle = { width: '50vw', height: '25vh' };
     return (
       <form onSubmit={this.handleSubmit}>
-        <textarea value={comment} onChange={this.updateComment}></textarea>
+        <textarea style={textareaStyle} value={comment} onChange={this.updateComment}></textarea>
+        <br />
         <button>Submit</button>
       </form>
     );

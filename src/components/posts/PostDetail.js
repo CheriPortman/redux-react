@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CommentsByPostId from '../../container/comments/CommentsByPostId';
+import CommentsByPostId from '../../containers/comments/CommentsByPostId';
 import CreateComment from '../../containers/comments/CreateComment';
 
 function PostDetail({ post }) {
@@ -8,8 +8,10 @@ function PostDetail({ post }) {
     <p key={i}>{p}</p>
   ));
 
+  const sectionStyle = { textAlign: 'center', fontSize: '24px' };  
+
   return (
-    <section>
+    <section style={sectionStyle}>
       <h1>{post.title}</h1>
       {paras}
       <CommentsByPostId postId={post.id} />

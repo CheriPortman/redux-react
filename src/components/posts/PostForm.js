@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { FaCheck } from 'react-icons/fa';
+import styles from '../../components/Home.css';
 
 export default class PostForm extends PureComponent {
   //static proptypes typically hint at connect
@@ -9,8 +10,8 @@ export default class PostForm extends PureComponent {
   }
 
   state = {
-    title: '',
-    body: ''
+    title: 'enter post title here',
+    body: 'enter post text here'
   }
 
   handleSubmit = event => {
@@ -22,16 +23,20 @@ export default class PostForm extends PureComponent {
   }
 
   handleChange = ({ target }) => {
-    console.log('target', target);
     this.setState({ [target.name]: target.value });
   }
 
   render() {
     const { title, body } = this.state;
+    const textareaStyle = { width: '50vw', height: '25vh', margin: '10px', marginBottom: '-5px', marginTop: '10px' };
+    
+
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className={styles.PostForm} onSubmit={this.handleSubmit}>
         <input name="title" value={title} onChange={this.handleChange} />
-        <textarea name="body" value={body} onChange={this.handleChange}></textarea>
+        <br />
+        <textarea style={textareaStyle} name="body" value={body} onChange={this.handleChange}></textarea>
+        <br />
         <button>Submit <FaCheck /></button>
       </form>
     );

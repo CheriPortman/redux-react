@@ -9,7 +9,7 @@ const mapStateToProps = (state, { postId }) => ({
 
 const mapDispatchToProps = (dispatch, { postId }) => ({
   deleteComment(commentId) {
-    dispatchEvent(deleteComment(postId, commentId));
+    dispatch(deleteComment(postId, commentId));
   }
 });
 
