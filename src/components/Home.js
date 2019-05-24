@@ -2,6 +2,8 @@ import React from 'react';
 import CreatePost from '../containers/posts/CreatePost';
 import AllPosts from '../containers/posts/AllPosts';
 
+import CommentForm from '../components/comments/CommentForm';
+
 export default function Home() {
   return (
     <>
@@ -13,6 +15,7 @@ export default function Home() {
       <section>
         <AllPosts />
       </section>
+      <CommentForm />
     </>
   );
 }
