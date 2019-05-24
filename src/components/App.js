@@ -1,15 +1,25 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+// import PostById from '../containers/posts/PostById';
+import Home from './Home';
 
 //here just for seeing as things are getting connected
-import PostForm from './posts/PostForm';
-import Posts from './posts/Posts';
+// import AllPosts from '../containers/posts/AllPosts';
+// import CreatePost from '../containers/posts/CreatePost';
+
+// import PostForm from './posts/PostForm';
+// import Posts from './posts/Posts';
 
 export default function App() {
   return (
-    <>s
-      <h1>hoisdfu</h1>
-      <PostForm />
-      <Posts />
-    </>
+    <Router>
+      <Link to="/">Home</Link>
+      <Switch>
+        <Route path="/" component={Home} />
+        {/* <AllPosts />
+          <CreatePost /> */}
+      </Switch>
+    </Router>
+
   );
 }
